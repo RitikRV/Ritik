@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#intro" class="logo"><img src="img\logo.jpg" alt="Brand Logo" ></a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#items">Items</a></li>
+            <li><a href="#orders">Order</a></li>
+            <li><a href="#sign">Sign In</a></li>
+            <li><a href="#sign">Sign Up</a></li>
+        </ul>
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <button>🔍</button>
+        </div>
+    </nav>
+
+
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("active");
+        }
+    </script>
+    
+
+    <section class="intro" id="intro">
+        <div class="intro-text">
+            <h1>Welcome to Our Website</h1>
+            <p>Discover amazing products and services with us. Explore and enjoy a seamless experience.</p>
+        </div>
+        <div class="intro-image"></div>
+    </section>
+    
+
+
+
+    <section class="items-section" id="items">
+        <h2>Our Items</h2>
+        <div class="items-container">
+            <div class="item-box">
+                <div class="item-image"><img src="img/image1.jpg" alt=""></div>
+                <div class="item-name">Necklace</div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+            <div class="item-box">
+                <div class="item-image"><img src="img/image2.jpg" alt=""></div>
+                <div class="item-name">Diamond Ring</div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+            <div class="item-box">
+                <div class="item-image"><img src="img/image3.jpg" alt=""></div>
+                <div class="item-name">Diamond Ring</div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+            <div class="item-box">
+                <div class="item-image"><img src="img/image4.jpg" alt=""></div>
+                <div class="item-name">Diamond ring</div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+            <div class="item-box">
+                <div class="item-image"><img src="img/image5.jpg" alt=""></div>
+                <div class="item-name">Diamond Ring</div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="order-section" id="orders">
+        <div class="order-box">
+            <h2>Order Gold</h2>
+            <label for="gold-image" class="image-upload" style="display: block; width: 100%; height: 150px; background: #ddd; text-align: center; line-height: 150px; cursor: pointer;">Drag & Drop or Click to Upload</label>
+            <input type="file" id="gold-image" accept="image/*" style="display: none;">
+            <p class="price">Price: Set by Owner</p>
+            <label for="gold-rate">Gold Rate (MCX):</label>
+            <input type="text" id="gold-rate" value="Updated Daily" readonly>
+            <input type="number" placeholder="Weight in grams">
+            <input type="text" placeholder="Item Name">
+            <select>
+                <option>Credit Card</option>
+                <option>Debit Card</option>
+                <option>Net Banking</option>
+            </select>
+            <button onclick="alert('Order placed successfully! 😊 Feel free to visit again!')">Order</button>
+        </div>
+        <div class="order-box">
+            <h2>Order Silver</h2>
+            <label for="silver-image" class="image-upload" style="display: block; width: 100%; height: 150px; background: #ddd; text-align: center; line-height: 150px; cursor: pointer;">Drag & Drop or Click to Upload</label>
+        <input type="file" id="silver-image" accept="image/*" style="display: none;">
+            <p class="price">Price: Set by Owner</p>
+            <label for="silver-rate">Silver Rate (MCX):</label>
+            <input type="text" id="silver-rate" value="Updated Daily" readonly>
+            <input type="number" placeholder="Weight in grams">
+            <input type="text" placeholder="Item Name">
+            <select>
+                <option>Credit Card</option>
+                <option>Debit Card</option>
+                <option>Net Banking</option>
+            </select>
+            <button onclick="alert('Order placed successfully! 😊 Feel free to visit again!')">Order</button>
+        </div>
+    </section>
+
+
+    <section class="auth-section" id="sign">
+        <div class="auth-box">
+            <h2>Sign In</h2>
+            <input type="text" placeholder="Username or Email">
+            <input type="password" placeholder="Password">
+            <button>Sign In</button>
+        </div>
+        <div class="auth-box">
+            <h2>Sign Up</h2>
+            <input type="text" placeholder="Full Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <input type="password" placeholder="Confirm Password">
+            <button>Sign Up</button>
+        </div>
+    </section>
+    
+
+    <section class="about-section">
+        <div class="about-container">
+            <h2>About Us</h2>
+            <p class="about-info"><strong>Business Name:</strong> Your Business Name</p>
+            <p class="about-info"><strong>Phone:</strong> +91 98765 43210</p>
+            <p class="about-info"><strong>Email:</strong> yourbusiness@email.com</p>
+            <p class="about-info"><strong>Address:</strong> 123, Your Street, Your City, Country</p>
+    
+            <div class="query-box">
+                <h3>Have a Query? Ask Us!</h3>
+                <textarea rows="4" placeholder="Type your query here..."></textarea>
+                <button>Submit</button>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <p>&copy; 2025 Your Business Name. All Rights Reserved.</p>
+        <p>Contact: <a href="mailto:contact@yourbusiness.com">contact@yourbusiness.com</a></p>
+        <p>Follow us on 
+            <a href="#">Facebook</a> | 
+            <a href="#">Instagram</a> | 
+            <a href="#">Twitter</a>
+        </p>
+    </footer>
+
+
+</body>
+</html>
